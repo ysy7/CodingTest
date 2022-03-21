@@ -9,9 +9,24 @@ int main(void)
 	float sosu1 = 0.001592f;
 	// 문자는 띄어쓰기 포함해서 11개
 	// 배열의 길이는 11+1(널문자) = 12
-	char mjyeol[12] = "Hello World";
+	char mjyeol[] = "Hello World";
 
 	printf("정수 %d, 문자 %c, 더블 %lf, 플롯 %f\n"
 		, jungsu, munja, sosu, sosu1);
-	printf("%s\n", mjyeol);
+	
+	//printf("%s\n", mjyeol);
+	// mjyeol를 %c로 찍어보자
+	printf("%c", mjyeol[0]);	// 'H'
+	printf("%c", mjyeol[1]);	// 'e'
+	printf("%c", mjyeol[2]);	// 'l'
+	printf("%c", mjyeol[3]);	// 'l'
+	printf("%c", mjyeol[4]);	// 'o'
+	printf("%c", mjyeol[5]);	// ' '
+	printf("%c", mjyeol[6]);	// 'W'
+	printf("%c", mjyeol[7]);	// 'o'
+	printf("%c", mjyeol[8]);	// 'r'
+	printf("%c", mjyeol[9]);	// 'l'
+	printf("%c", mjyeol[10]);	// 'd'
+	printf("%c", mjyeol[11]);	// '\0'
+	
 }
