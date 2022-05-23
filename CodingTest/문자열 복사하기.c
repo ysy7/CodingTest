@@ -1,5 +1,15 @@
 #include <stdio.h>
-#include <string.h>
+#include <string.h>    //strlen() 호출
+
+//d: 복사할 공간(destination), s: 복사할 문자열 (source)
+void my_strcpy(char* d, char* s) {
+	int length = strlen(s);
+
+	//for (int i=0; src[i] !='\0'; i++)
+	for (int i = 0; i < length; i++) {
+		d[i] = s[i];
+	}
+}
 
 int main(void)
 {
@@ -7,15 +17,18 @@ int main(void)
 
 	char dest[20];         //복사할 공간
 	char src[] = "Hello";  //복사할 문자열
-	int length = strlen(src);
 
-	//for (int i=0; src[i] !='\0'; i++)
-	for (int i = 0; i<length; i++) {
-		dest[i] = src[i];
-	}
-	for (int i = 0; i < 6; i++) {
+	//src에 있는 "Hello"를 dest에 복사
+	my_strcpy(dest, src);
+
+	int length = strlen(src);
+	for (int i = 0; i < length; i++)
+	{
 		printf("%c", dest[i]);
 	}
+	
+
+	
 
 
 	return 0;
