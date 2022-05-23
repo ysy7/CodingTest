@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 int main(void)
 {
@@ -6,8 +7,10 @@ int main(void)
 
 	char dest[20];         //복사할 공간
 	char src[] = "Hello";  //복사할 문자열
+	int length = strlen(src);
 
-	for (int i = 0; i < 6; i++) {
+	//for (int i=0; src[i] !='\0'; i++)
+	for (int i = 0; i<length; i++) {
 		dest[i] = src[i];
 	}
 	for (int i = 0; i < 6; i++) {
