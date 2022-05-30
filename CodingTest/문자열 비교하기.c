@@ -3,7 +3,7 @@
 
 //두 문자열의 내용이 같은지 다른지를 확인  
 //같으면 0을 반환, 다르면 1을 반환
-void my_strcmp(char* str1, char* str2)
+int my_strcmp(char* str1, char* str2)
 {
 	int str1_len = strlen(str1);    //str1의 문자갯수
 	int str2_len = strlen(str2);     //str2의 문자갯수
@@ -17,12 +17,17 @@ void my_strcmp(char* str1, char* str2)
 		if (str1[i] != str2[i])
 			return 1;
 	}
+	return 0;
 }
 int main(void)
 {
 	char a[20] = "Hello";
 	char b[20] = "Yellow";
-	my_strcmp(a, b);
+	if (my_strcmp(a, b) == 0)
+		printf("문자열은 같습니다. ");
+	else
+		printf("문자열은 다릅니다. ");
+
 
 	
 
